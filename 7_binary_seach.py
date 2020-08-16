@@ -16,7 +16,7 @@ def binary_search(list, n):
             end_index = midpoint - 1
 
 
-def sort(list):
+def bubble_sort(list):
     for i in range(len(list) - 1, 0, -1):
         for j in range(i):
             if list[j] > list[j + 1]:
@@ -26,8 +26,7 @@ def sort(list):
 
 
 list = [7, 1, 8, 5, 6, 3, 9, 2, 4, 10]
-sort(list)
-
+bubble_sort(list)
 print(list)
 n = 8
 
