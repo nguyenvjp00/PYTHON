@@ -6,7 +6,6 @@ def sort(list):
                 list[j] = list[j + 1]
                 list[j + 1] = temp
 
-
 list = [5, 3, 8, 7, 6, 2]
 sort(list)
 print(list)
