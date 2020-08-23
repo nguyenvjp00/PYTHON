@@ -8,7 +8,11 @@ def sort(list):
 
     return list
 
-
-list = [24, 67, 16, 885, 23, 875, 232, 1]
+list = []
+print("Nhập vào số phần tử của mảng: ")
+n = int(input())
+print("Nhập vào các phần tử của mảng: ")
+for i in range(n):
+    list.append(int(input()))
 sort(list)
-print(list)
+print("Mảng đã được sắp xếp: ", list)

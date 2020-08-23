@@ -14,6 +14,11 @@ def sort(list):
             items_lower.append(item)
     return sort(items_lower) + [pivot] + sort(items_greater)
 
-list = [2, 8, 3, 7, 9, 5, 1, 4]
+list = []
+print("Nhập vào số phần tử của mảng: ")
+n = int(input())
+print("Nhập vào các phần tử của mảng: ")
+for i in range(n):
+    list.append(int(input()))
 sort(list)
-print(sort(list))
+print("Mảng đã được sắp xếp: ", list)
