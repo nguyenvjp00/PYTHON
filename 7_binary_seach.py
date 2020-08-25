@@ -12,22 +12,8 @@ def binary_search(list, n):
             end_index = midpoint - 1
 
 
-def sapxep(list):
-    in_length = len(list) - 1
-    sorted = False
-    while not sorted:
-        sorted = True
-        for i in range(0, in_length):
-            if list[i] > list[i + 1]:
-                sorted = False
-                list[i], list[i + 1] = list[i + 1], list[i]
-    return list
-
-
-
 list = [7, 1, 8, 5, 6, 3, 9, 2, 4, 10]
-sapxep(list)
-print("Mảng được sắp xếp: ", list)
+print("Mảng được sắp xếp: ", sorted(list))
 n = 8
 print("Số cần tìm: ", n)
 

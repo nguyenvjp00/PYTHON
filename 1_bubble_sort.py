@@ -1,13 +1,9 @@
 def sapxep(list):
     in_length = len(list) - 1
-    sorted = False
-    while not sorted:
-        sorted = True
-        for i in range(0, in_length):
-            if list[i] > list[i + 1]:
-                sorted = False
-                list[i], list[i + 1] = list[i + 1], list[i]
-    return list
+    for i in range(in_length):
+        for j in range(0, in_length - i):
+            if list[j] > list[j + 1]:
+                list[j], list[j + 1] = list[j + 1], list[j]
 
 
 list = []
