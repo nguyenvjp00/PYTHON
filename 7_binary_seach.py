@@ -1,6 +1,3 @@
-# pos = -1
-
-
 def binary_search(list, n):
     begin_index = 0
     end_index = len(list) - 1
@@ -8,7 +5,6 @@ def binary_search(list, n):
     while begin_index <= end_index:
         midpoint = (begin_index + end_index) // 2
         if list[midpoint] == n:
-            #globals()['pos'] = midpoint
             return True
         elif list[midpoint] < n:
             begin_index = midpoint + 1
@@ -16,21 +12,26 @@ def binary_search(list, n):
             end_index = midpoint - 1
 
 
-def bubble_sort(list):
-    for i in range(len(list) - 1, 0, -1):
-        for j in range(i):
-            if list[j] > list[j + 1]:
-                temp = list[j]
-                list[j] = list[j + 1]
-                list[j + 1] = temp
+def sapxep(list):
+    in_length = len(list) - 1
+    sorted = False
+    while not sorted:
+        sorted = True
+        for i in range(0, in_length):
+            if list[i] > list[i + 1]:
+                sorted = False
+                list[i], list[i + 1] = list[i + 1], list[i]
+    return list
+
 
 
 list = [7, 1, 8, 5, 6, 3, 9, 2, 4, 10]
-bubble_sort(list)
-print(list)
+sapxep(list)
+print("Mảng được sắp xếp: ", list)
 n = 8
+print("Số cần tìm: ", n)
 
 if binary_search(list, n):
-    print("Found", n)
+    print("Tìm thấy tại vị trí số: ", n)
 else:
-    print("Not found")
+    print("Không tìm thấy")
